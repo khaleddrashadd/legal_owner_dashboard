@@ -1,0 +1,13 @@
+.custom-toast-success,
+.custom-toast-error {
+  @apply border border-solid  rounded-md shadow-sm py-4 px-5;
+  width: 492px;
+}
+
+.custom-toast-success {
+  @apply bg-secondary-250 border-secondary-150;
+}
+
+.custom-toast-error {
+  @apply bg-danger-50 border-danger-200;
+}
