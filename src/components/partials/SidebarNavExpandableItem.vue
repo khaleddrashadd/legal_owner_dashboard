@@ -12,7 +12,8 @@
       :class="{
         'bg-secondary-400': routes.some((route) =>
           typeof route.to === 'string' ? $route.path === route.to : $route.name === route.to.name
-        )
+        ),
+        'w-max': !isSidebarOpen
       }"
     >
       <div class="flex gap-3 items-center w-full h-full rounded-2xl">
@@ -34,7 +35,8 @@
       class="flex flex-col"
       v-if="isListExpanded"
       :class="{
-        'absolute right-full bg-primary-600 p-2 rounded-2xl': !isSidebarOpen
+        'absolute right-full bg-primary-600 rounded-2xl top-0': !isSidebarOpen,
+        'p-2': routes.length
       }"
     >
       <router-link

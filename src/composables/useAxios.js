@@ -8,9 +8,8 @@ const useAxios = () => {
   watchEffect((onCleanup) => {
     const requestIntercept = api.interceptors.request.use(
       (config) => {
-        let token = localStorage.getItem('accessToken');
-        token =
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJmMTgyNWRjZS02MGNhLTQ3MGMtYmZkZS0wNThiNzA1NzI3YzgiLCJVc2VySWQiOiI3ZWY0N2EwOC04OTJlLTRkOTgtYjU3Zi1jNzM0NTMzZThhM2IiLCJFbWFpbCI6ImFtcnVzZXI5N0BnbWFpbC5jb20iLCJleHAiOjIxNjc2MzQ1NDgsImlzcyI6IlNlY3VyZUFwaSIsImF1ZCI6IlNlY3VyZUFwaVVzZXIifQ.KSBgkNh0AXre4by8uodBSF4LEpjQU9dA6Qj9JJ9E8iI';
+        const token = localStorage.getItem('accessToken');
+
         config.headers['Authorization'] = `Bearer ${token}`;
         return config;
       },

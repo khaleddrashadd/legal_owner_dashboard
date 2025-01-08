@@ -6,7 +6,7 @@ import AppFooter from '@/components/partials/AppFooter.vue';
 
 <template>
   <div
-    class="grid bg-ivory-200 w-full grid-cols-[max-content,minmax(0,1fr)] grid-rows-[max-content,1fr,max-content]"
+    class="grid bg-ivory-100 w-full grid-cols-[max-content,minmax(0,1fr)] grid-rows-[max-content,1fr,max-content]"
   >
     <SidebarNav class="col-start-1 col-span-1 row-start-1 row-span-2" />
     <AppHeader />

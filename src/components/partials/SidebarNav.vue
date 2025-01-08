@@ -13,7 +13,7 @@
         <li
           class="flex items-center duration-300 hover:bg-secondary-400 hover:text-white rounded-2xl"
           :class="{
-            'justify-center': !isSidebarOpen
+            'justify-center w-max': !isSidebarOpen
           }"
         >
           <router-link

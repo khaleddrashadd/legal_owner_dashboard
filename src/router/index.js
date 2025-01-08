@@ -17,22 +17,22 @@ const router = createRouter({
         {
           path: '/statistics',
           name: 'statistics',
-          component: () => import('@/views/StatisticsView.vue')
+          component: () => import('@/views/reports/StatisticsView.vue')
         },
         {
           path: '/payments',
           name: 'payments',
-          component: () => import('@/views/StatisticsView.vue')
+          component: () => import('@/views/reports/PaymentsView.vue')
         },
         {
           path: '/accounts',
           name: 'accounts',
-          component: () => import('@/views/StatisticsView.vue')
+          component: () => import('@/views/reports/StatisticsView.vue')
         },
         {
           path: '/collections',
           name: 'collections',
-          component: () => import('@/views/StatisticsView.vue')
+          component: () => import('@/views/reports/StatisticsView.vue')
         }
       ],
 
@@ -41,7 +41,6 @@ const router = createRouter({
   ]
 });
 
-/*
 router.beforeEach(async (to) => {
   const accessToken = localStorage.getItem('accessToken');
 
@@ -57,5 +56,5 @@ router.beforeEach(async (to) => {
     }
   }
 });
-*/
+
 export default router;

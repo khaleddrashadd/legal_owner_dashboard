@@ -6,14 +6,14 @@
       <div class="flex items-center gap-x-1">
         <div class="rounded-full border border-secondary-50">
           <img
-            :src="userPlaceHolder"
+            :src="redfLogo"
             alt="user photo"
             class="text-2xs object-cover w-10 h-10 rounded-full"
           />
         </div>
         <div class="flex flex-col">
-          <h4 class="font-bold text-sm text-ivory-950">Ammar Muhammad</h4>
-          <p class="text-2xs text-ivory-800">Last sign-in 20/5/2024 at 3:14PM</p>
+          <span class="text-2xs text-ivory-900">مرحباً</span>
+          <h4 class="font-semibold text-sm text-ivory-950">REDF</h4>
         </div>
       </div>
       <div>
@@ -74,6 +74,8 @@ import CalendarIcon from '@/assets/icons/calendar.svg';
 import LogoutIcon from '@/assets/icons/logout.svg';
 import ChevronIcon from '@/assets/icons/chevron.svg';
 import userPlaceHolder from '@/assets/images/user-placeholder.png';
+import redfLogo from '@/assets/images/redf-logo.jpeg';
+import srcLogo from '@/assets/images/src-logo.jpg';
 import { Auth } from '@/libs/msal';
 import Dialog from 'primevue/dialog';
 import { ref } from 'vue';

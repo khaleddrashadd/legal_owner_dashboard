@@ -10,11 +10,7 @@ export const config = {
     clientId: import.meta.env.VITE_AUTH_CLIENT_ID,
     authority: import.meta.env.VITE_AUTH_AUTHORITY,
     knownAuthorities: [import.meta.env.VITE_AUTH_AUTHORITY],
-    redirectUri: 'http://localhost:3000/'
-    // clientId: '196d405a-30de-4dc4-9128-f667c41f9255',
-    // authority: 'https://login.microsoftonline.com/c2163620-a647-4b80-a3d7-1edd5d8ec951/',
-    // redirectUri: 'http://localhost:8080/login/',
-    // knownAuthorities: ['https://login.microsoftonline.com/c2163620-a647-4b80-a3d7-1edd5d8ec951/'],
+    redirectUri: 'https://kyc.nfsc.sa/login'
   },
 
   // optional

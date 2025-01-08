@@ -4,7 +4,7 @@
       <div class="mb-16 xs:w-[343px] h-[66px] w-full">
         <img :src="logoImg" alt="city" class="h-full" />
       </div>
-      <div class="text-center">
+      <div class="text-center flex flex-col">
         <h2 class="mb-8 font-semibold text-ivory-950 text-xl">
           تسجيل الدخول إلى حسابك في نظام ملاك المحافظ
         </h2>
