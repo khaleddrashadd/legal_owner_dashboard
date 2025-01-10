@@ -10,7 +10,7 @@ export const config = {
     clientId: import.meta.env.VITE_AUTH_CLIENT_ID,
     authority: import.meta.env.VITE_AUTH_AUTHORITY,
     knownAuthorities: [import.meta.env.VITE_AUTH_AUTHORITY],
-    redirectUri: 'https://kyc.nfsc.sa/login'
+    redirectUri: 'http://localhost:3000/'
   },
 
   // optional

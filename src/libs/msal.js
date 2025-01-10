@@ -37,8 +37,8 @@ export const Auth = {
   async login() {
     const request = {
       redirectUri: config.auth.redirectUri,
-      scopes,
-      loginHint: 'selemam@wtco.com.sa'
+      scopes
+      // loginHint: 'selemam@wtco.com.sa'
     };
     return msal
       .loginPopup(request)

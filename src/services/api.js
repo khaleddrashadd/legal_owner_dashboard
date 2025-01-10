@@ -35,12 +35,13 @@ export function createApiService() {
   const httpClient = useAxios();
 
   return {
-    async getData(endpoint, data) {
+    async get(endpoint, data) {
       const response = await httpClient.get(endpoint, data);
+      console.log(response);
       return response.data;
     },
 
-    async postData(endpoint, data) {
+    async post(endpoint, data) {
       const response = await httpClient.post(endpoint, data);
       return response.data;
     }

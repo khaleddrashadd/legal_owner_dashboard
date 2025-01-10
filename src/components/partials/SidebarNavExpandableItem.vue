@@ -35,7 +35,8 @@
       class="flex flex-col"
       v-if="isListExpanded"
       :class="{
-        'absolute right-full bg-primary-600 rounded-2xl top-0': !isSidebarOpen,
+        'absolute right-full bg-primary-600 rounded-2xl top-0 before:absolute before:border-[10px] before:border-l-primary-600 before:border-r-transparent before:border-t-transparent before:border-b-transparent before:left-full before:top-4 before:rounded-lg':
+          !isSidebarOpen,
         'p-2': routes.length
       }"
     >

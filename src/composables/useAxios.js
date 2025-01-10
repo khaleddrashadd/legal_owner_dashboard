@@ -2,12 +2,13 @@ import { Auth } from '@/libs/msal';
 import axios from 'axios';
 import { watchEffect } from 'vue';
 const api = axios.create({
-  baseURL: `${import.meta.env.VITE_API_ENDPOINT}`
+  baseURL: import.meta.env.VITE_API_ENDPOINT
 });
 const useAxios = () => {
   watchEffect((onCleanup) => {
     const requestIntercept = api.interceptors.request.use(
       (config) => {
+        console.log(config);
         const token = localStorage.getItem('accessToken');
 
         config.headers['Authorization'] = `Bearer ${token}`;

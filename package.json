@@ -25,6 +25,8 @@
     "jwt-decode": "^4.0.0",
     "pinia": "^2.2.4",
     "postcss": "^8.4.47",
+    "powerbi-client-vue-js": "^1.1.1",
+    "powerbi-report-authoring": "^2.0.0",
     "primevue": "^4.1.0",
     "tailwindcss-primeui": "^0.3.4",
     "vee-validate": "^4.13.2",

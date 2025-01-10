@@ -41,20 +41,20 @@ const router = createRouter({
   ]
 });
 
-router.beforeEach(async (to) => {
-  const accessToken = localStorage.getItem('accessToken');
+// router.beforeEach(async (to) => {
+//   const accessToken = localStorage.getItem('accessToken');
 
-  if (to.meta.requiresAuth && !accessToken) {
-    return '/login';
-  }
-  if (to.name === 'login' && accessToken) {
-    try {
-      await Auth.getToken();
-      return '/';
-    } catch (e) {
-      console.log(e);
-    }
-  }
-});
+//   if (to.meta.requiresAuth && !accessToken) {
+//     return '/login';
+//   }
+//   if (to.name === 'login' && accessToken) {
+//     try {
+//       await Auth.getToken();
+//       return '/';
+//     } catch (e) {
+//       console.log(e);
+//     }
+//   }
+// });
 
 export default router;
