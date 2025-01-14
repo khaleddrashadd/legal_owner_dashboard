@@ -1,6 +1,12 @@
 import { LogLevel } from '@azure/msal-browser';
 
-export const scopes = ['email'];
+// export const scopes = ['email'];
+export const scopes = [
+  'https://analysis.windows.net/powerbi/api/App.Read.All',
+  'https://analysis.windows.net/powerbi/api/Dataset.Read.All',
+  'https://analysis.windows.net/powerbi/api/Report.Read.All'
+  // Add other required Power BI scopes based on your needs
+];
 // const redirectUri = `${location.origin}/login`;
 
 export const config = {

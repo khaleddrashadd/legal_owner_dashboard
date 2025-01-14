@@ -42,7 +42,13 @@
           title="الخدمات"
           :Icon="AppsIcon"
           :isSidebarOpen
-          :routes="[]"
+          :routes="[
+            { title: 'اعادة جدولة', to: { name: 'statistics' } },
+            { title: 'ترحيل دفعات', to: { name: 'payments' } },
+            { title: 'سداد مبكر', to: { name: 'accounts' } },
+            { title: 'حالة وفاة', to: { name: 'collections' } },
+            { title: 'حالة تقرير سمه', to: { name: 'collections' } }
+          ]"
           :handleOpenSidebar="handleOpenSidebar"
         />
       </ul>

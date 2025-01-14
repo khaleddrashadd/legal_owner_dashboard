@@ -51,7 +51,7 @@ export const Auth = {
         };
         localStorage.setItem('accessToken', result.accessToken);
         localStorage.setItem('user', JSON.stringify(user));
-        localStorage.setItem('idToken', result.idToken);
+        localStorage.setItem('accessToken', result.idToken);
 
         // set active account
         return this.setAccount(result.account);
@@ -73,7 +73,7 @@ export const Auth = {
       // required to make the application return to the home page
       mainWindowRedirectUri: '/login',
       account: msal.getActiveAccount(),
-      logoutHint: localStorage.getItem('idToken')
+      logoutHint: localStorage.getItem('accessToken')
     });
     localStorage.clear();
     return onLogout;
@@ -84,7 +84,8 @@ export const Auth = {
    */
   async getToken() {
     const request = {
-      scopes
+      scopes: ['https://analysis.windows.net/powerbi/api/.default'],
+      extraScopesToConsent: scopes
     };
     return (
       msal

@@ -70,6 +70,10 @@ export default {
           900: '#565656',
           950: '#121212'
         }
+      },
+      direction: {
+        'dir-rtl': 'rtl',
+        'dir-ltr': 'ltr'
       }
     }
   },

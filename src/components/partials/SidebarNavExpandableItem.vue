@@ -3,7 +3,7 @@
     class="rounded-2xl duration-300 relative"
     :class="{
       'justify-center': !isSidebarOpen,
-      'bg-primary-600 p-2': isListExpanded && !beta && isSidebarOpen
+      'bg-primary-600 p-2': isListExpanded && isSidebarOpen
     }"
   >
     <div
@@ -20,7 +20,7 @@
         <Icon class="fill-white w-6 h-6" />
         <span v-show="isSidebarOpen" class="text-sm font-semibold select-none">{{ title }}</span>
         <span
-          class="text-sm font-semibold text-[#D7B40B] rounded-full px-2 bg-[#FFF8D4] rtl:-mr-2 ltr:-ml-2"
+          class="text-xs font-semibold text-[#D7B40B] rounded-full px-1 bg-[#FFF8D4] rtl:-mr-2 ltr:-ml-2"
           v-if="beta && isSidebarOpen"
           >قريبا</span
         >
@@ -45,7 +45,7 @@
         :key="route?.title"
         :to="route?.to"
         exactActiveClass="text-secondary-200"
-        class="block px-6 py-[10px] duration-300 hover:text-secondary-200 text-xs"
+        class="block px-6 py-[10px] duration-300 hover:text-secondary-200 text-xs select-none"
         >{{ route?.title }}</router-link
       >
     </ul>
